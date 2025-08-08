@@ -187,33 +187,6 @@ We welcome contributions! Here's how you can help:
 3. **Code Contributions**: Submit pull requests
 4. **Documentation**: Help improve our docs
 5. **Testing**: Test with different wound types and images
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **Google Gemini AI** for intelligent wound classification
-- **DepthAnythingV2** team for depth estimation capabilities
-- **Gradio** for the beautiful web interface
-- **Open3D** for 3D point cloud processing
-- **Medical professionals** who provided domain expertise
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/yourusername/Wound-Analysis-Cpu/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/Wound-Analysis-Cpu/discussions)
-- **Email**: [your-email@example.com]
-
-## 🔄 Updates
-
-Stay updated with the latest features and improvements:
-
-- **Star the repository** to track updates
-- **Watch for releases** for new features
-- **Follow our blog** for detailed tutorials and case studies
-
 ---
 
 **Made with ❤️ for the medical community**
