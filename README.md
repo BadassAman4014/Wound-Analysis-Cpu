@@ -348,24 +348,6 @@ python app.py
 - **Storage**: Use SSD for model storage
 - **Network**: Use local model hosting for offline use
 
-## 📄 License & Disclaimer
-
-### License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-### Medical Disclaimer
-⚠️ **IMPORTANT MEDICAL DISCLAIMER**
-
-This software is provided for research and educational purposes only. It is NOT intended for:
-- Clinical diagnosis or treatment decisions
-- Replacement of professional medical judgment
-- Use in emergency or life-threatening situations
-
-**Always consult qualified healthcare professionals for medical advice.**
-
-### Liability
-The authors and contributors assume no responsibility for any medical decisions or outcomes based on this software's output.
-
 ## 🙏 Acknowledgments
 
 - **Depth Anything V2** team for the depth estimation framework
@@ -374,22 +356,3 @@ The authors and contributors assume no responsibility for any medical decisions 
 - **Hugging Face** for model hosting and transformers library
 - **Gradio** team for the intuitive interface framework
 - **Medical imaging community** for datasets and validation
-
-## 📞 Support & Contact
-
-### Getting Help
-- 📖 **Documentation**: [Wiki](https://github.com/your-username/wound-analysis-cpu/wiki)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/your-username/wound-analysis-cpu/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/your-username/wound-analysis-cpu/discussions)
-- 📧 **Email**: your.email@domain.com
-
-### Community
-- 🔬 **Research Collaboration**: Open to academic partnerships
-- 🏥 **Clinical Validation**: Seeking healthcare institution partnerships
-- 💼 **Commercial Licensing**: Available for enterprise applications
-
----
-
-**Made with ❤️ for advancing medical AI and wound care**
-
-*Last updated: January 2025*
