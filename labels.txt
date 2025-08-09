@@ -1,4 +1,0 @@
-0 Burns
-1 Surgical Wound
-2 Traumatic Wound
-3 Diabetic Foot Ulcer
