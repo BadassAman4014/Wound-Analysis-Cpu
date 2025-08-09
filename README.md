@@ -6,6 +6,13 @@ A comprehensive medical AI system that combines wound classification, depth esti
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.10.1-orange.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.8.0-red.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/aman4014/Wound-Analysis-Cpu)
+
+## 🚀 Try It Live!
+
+**🌐 [Launch the Application on Hugging Face Spaces](https://huggingface.co/spaces/aman4014/Wound-Analysis-Cpu)**
+
+Experience the full wound analysis system directly in your browser - no installation required!
 
 ## 🌟 Key Features
 
