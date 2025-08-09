@@ -104,6 +104,13 @@ Wound-Analysis-Cpu/
 
 ### Quick Start
 
+**Option 1: Try Online (Recommended)**
+```
+🌐 Visit: https://huggingface.co/spaces/aman4014/Wound-Analysis-Cpu
+No installation required - runs directly in your browser!
+```
+
+**Option 2: Local Installation**
 ```bash
 # Clone the repository
 git clone https://github.com/your-username/wound-analysis-cpu.git
@@ -138,7 +145,8 @@ The system automatically downloads required models on first run:
 ## 📊 Usage Guide
 
 ### 1. **Web Interface**
-Access the Gradio interface at `http://localhost:7860`
+**Live Demo**: [https://huggingface.co/spaces/aman4014/Wound-Analysis-Cpu](https://huggingface.co/spaces/aman4014/Wound-Analysis-Cpu)  
+**Local Access**: `http://localhost:7860` (after local installation)
 
 **Three-Tab Workflow:**
 1. **Classification Tab**: Upload wound image for type identification
@@ -360,6 +368,27 @@ python app.py
 - **Depth Anything V2** team for the depth estimation framework
 - **Meta AI** for DINOv2 vision transformer
 - **Google DeepMind** for Gemini AI integration
-- **Hugging Face** for model hosting and transformers library
+- **Hugging Face** for model hosting, transformers library, and [Spaces platform](https://huggingface.co/spaces/aman4014/Wound-Analysis-Cpu)
 - **Gradio** team for the intuitive interface framework
 - **Medical imaging community** for datasets and validation
+
+## 📞 Support & Contact
+
+### Getting Help
+- 🌐 **Live Demo**: [Hugging Face Spaces](https://huggingface.co/spaces/aman4014/Wound-Analysis-Cpu) - Try the system online
+- 📖 **Documentation**: This README and inline code documentation
+- 🐛 **Issues**: Report bugs and request features via GitHub Issues
+- 💬 **Community**: Join discussions about wound analysis and medical AI
+
+### Deployment Options
+- **🔥 Hugging Face Spaces**: [Live deployment](https://huggingface.co/spaces/aman4014/Wound-Analysis-Cpu) for immediate testing
+- **🏠 Local Installation**: Full control with custom configurations
+- **🐳 Docker**: Containerized deployment for production environments
+- **☁️ Cloud**: Scalable deployment on AWS, GCP, or Azure
+
+---
+
+**Made with ❤️ for advancing medical AI and wound care**
+
+*🌐 Try it live: [Hugging Face Spaces](https://huggingface.co/spaces/aman4014/Wound-Analysis-Cpu)*  
+*Last updated: January 2025*
