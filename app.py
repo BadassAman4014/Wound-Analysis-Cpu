@@ -17,11 +17,9 @@ from tensorflow.keras.models import load_model
 # Classification imports
 from transformers import AutoImageProcessor, AutoModelForImageClassification
 import google.generativeai as genai
-
 import gdown
 import spaces
 import cv2
-
 
 # Import actual segmentation model components
 from models.deeplab import Deeplabv3, relu6, DepthwiseConv2D, BilinearUpsampling
@@ -429,15 +427,18 @@ class WoundSegmentationModel:
             weight_file_name = '2025-08-07_16-25-27.hdf5'
             model_path = f'./training_history/{weight_file_name}'
             
-            self.model = load_model(model_path, 
-                                  custom_objects={
-                                      'recall': recall,
-                                      'precision': precision,
-                                      'dice_coef': dice_coef,
-                                      'relu6': relu6,
-                                      'DepthwiseConv2D': DepthwiseConv2D,
-                                      'BilinearUpsampling': BilinearUpsampling
-                                  })
+            self.model = load_model(
+                model_path,
+                custom_objects={
+                    'recall': recall,
+                    'precision': precision,
+                    'dice_coef': dice_coef,
+                    'relu6': relu6,
+                    'DepthwiseConv2D': DepthwiseConv2D,
+                    'BilinearUpsampling': BilinearUpsampling
+                },
+                compile=False
+            )
             print(f"Segmentation model loaded successfully from {model_path}")
         except Exception as e:
             print(f"Error loading segmentation model: {e}")
@@ -446,15 +447,18 @@ class WoundSegmentationModel:
                 weight_file_name = '2019-12-19 01%3A53%3A15.480800.hdf5'
                 model_path = f'./training_history/{weight_file_name}'
                 
-                self.model = load_model(model_path, 
-                                      custom_objects={
-                                          'recall': recall,
-                                          'precision': precision,
-                                          'dice_coef': dice_coef,
-                                          'relu6': relu6,
-                                          'DepthwiseConv2D': DepthwiseConv2D,
-                                          'BilinearUpsampling': BilinearUpsampling
-                                      })
+                self.model = load_model(
+                    model_path,
+                    custom_objects={
+                        'recall': recall,
+                        'precision': precision,
+                        'dice_coef': dice_coef,
+                        'relu6': relu6,
+                        'DepthwiseConv2D': DepthwiseConv2D,
+                        'BilinearUpsampling': BilinearUpsampling
+                    },
+                    compile=False
+                )
                 print(f"Segmentation model loaded successfully from {model_path}")
             except Exception as e2:
                 print(f"Error loading fallback segmentation model: {e2}")
@@ -1760,5 +1764,6 @@ if __name__ == '__main__':
     demo.queue().launch(
         server_name="0.0.0.0",
         server_port=7860,
-        share=True
+        share=True,
+        debug=True
     )

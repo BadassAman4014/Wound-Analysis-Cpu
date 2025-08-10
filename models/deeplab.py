@@ -40,8 +40,24 @@ from tensorflow.keras.layers import InputSpec
 from tensorflow.keras.utils import get_source_inputs
 from keras import backend as K
 from keras.applications import imagenet_utils
-from keras.utils import conv_utils
-from keras.utils.data_utils import get_file
+
+def normalize_tuple(value, n, name):
+    """Transforms a single integer or iterable of integers into an integer tuple.
+    # Copied and simplified from Keras 2.x conv_utils
+    """
+    if isinstance(value, int):
+        return (value,) * n
+    try:
+        value_tuple = tuple(value)
+    except TypeError:
+        raise ValueError(f'The `{name}` argument must be a tuple of {n} integers. Received: {value}')
+    if len(value_tuple) != n:
+        raise ValueError(f'The `{name}` argument must be a tuple of {n} integers. Received: {value}')
+    for single_value in value_tuple:
+        if not isinstance(single_value, int):
+            raise ValueError(f'The `{name}` argument must be a tuple of {n} integers. Received: {value} including element {single_value} of type {type(single_value)}')
+    return value_tuple
+from tensorflow.keras.utils import get_file
 
 WEIGHTS_PATH_X = "https://github.com/bonlime/keras-deeplab-v3-plus/releases/download/1.1/deeplabv3_xception_tf_dim_ordering_tf_kernels.h5"
 WEIGHTS_PATH_MOBILE = "https://github.com/bonlime/keras-deeplab-v3-plus/releases/download/1.1/deeplabv3_mobilenetv2_tf_dim_ordering_tf_kernels.h5"
@@ -62,12 +78,12 @@ class BilinearUpsampling(Layer):
         self.data_format = K.image_data_format()
         self.input_spec = InputSpec(ndim=4)
         if output_size:
-            self.output_size = conv_utils.normalize_tuple(
+            self.output_size = normalize_tuple(
                 output_size, 2, 'output_size')
             self.upsampling = None
         else:
             self.output_size = None
-            self.upsampling = conv_utils.normalize_tuple(
+            self.upsampling = normalize_tuple(
                 upsampling, 2, 'upsampling')
 
     def compute_output_shape(self, input_shape):
